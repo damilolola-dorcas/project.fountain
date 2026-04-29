@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fountain International High School | Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fihs.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="hero">
+        <img src="fihs/download.jpg" alt="School Logo">
+        <span class="hero-text">FIHS</span>
+    </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">&#x2630;</div>
+
+    <nav id="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Programs</a>
+        <a href="admission.html">Admissions</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <button class="apply-btn" onclick="location.href='admission.html'">Apply Now</button>
+    </nav>
+    
+</header>
+
+<div class="hero-slider">
+    <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fihs/field.jpg');">
+        <div class="slide-content">
+            <h1>Shape Tomorrow's Leaders</h1>
+            <p>Excellence, Character, and Global Perspective — raising world-class citizens</p>
+            <button class="hero-cta" onclick="location.href='admission.html'">Enroll Now →</button>
+        </div>
+    </div>
+    <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fihs/lab.jpg');">
+        <div class="slide-content">
+            <h1>State-of-the-Art Labs</h1>
+            <p>Modern science and technology facilities for future innovators</p>
+            <button class="hero-cta" onclick="location.href='academics.html'">Explore Programs →</button>
+        </div>
+    </div>
+    <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fihs/music.jpg');">
+        <div class="slide-content">
+            <h1>Holistic Development</h1>
+            <p>Arts, sports, and character formation beyond academics</p>
+            <button class="hero-cta" onclick="location.href='gallery.html'">View Campus Life →</button>
+        </div>
+    </div>
+    <button class="slider-prev">&#x276E;</button>
+    <button class="slider-next">&#x276F;</button>
+</div>
+
+<!-- VISION & MISSION -->
+<section class="welcome">
+    <div class="vision">
+        <h2>VISION</h2>
+        <p>The vision of the School is to become a world-class secondary school dedicated to providing high-quality education that equips students with the knowledge, skills, and values needed to excel in a competitive global environment. The school aspires to raise students who are academically sound, morally upright, and technologically competent, capable of making meaningful contributions to society.</p>
+    </div>
+    <div class="mission">
+        <h2>MISSION</h2>
+        <p>The mission of the School is to provide a sound and qualitative education that develops students intellectually, morally, and socially. The school is committed to creating a disciplined and supportive learning environment where students are encouraged to achieve academic excellence and personal growth, fostering creativity, critical thinking, and good character.</p>
+    </div>
+</section>
+
+<!-- STATS --> 
+<section class="stats-section">
+    <div class="stat-card">
+        <div class="stat-number">25+</div>
+        <div class="stat-label">Years of Excellence</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Pass Rate (WAEC/NECO)</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">1000+</div>
+        <div class="stat-label">Graduates</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Qualified Staff</div>
+    </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section class="experience">
+    <h1>Experience Fountain</h1>
+    <p class="subtext">View Memories &bull; Campus Tours &bull; Student Life</p>
+    <a href="gallery.html">
+        <span class="icon">&#x25B6;</span>
+    </a>
+</section>
+
+<!-- CAMPUS HIGHLIGHTS -->
+<section class="highlights">
+    <h2>Why Choose Fountain?</h2>
+    <div class="highlights-grid">
+        <div class="highlight-item">
+            <div class="highlight-icon">&#x1F3EB;</div>
+            <h3>Modern Facilities</h3>
+            <p>Smart classrooms, science labs, ICT center, and library</p>
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-icon">&#x1F469;&#x1F468;</div>
+            <h3>Expert Teachers</h3>
+            <p>Dedicated, qualified educators with passion for excellence</p>
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-icon">&#x1F947;</div>
+            <h3>Moral Excellence</h3>
+            <p>Character development and discipline as core values</p>
+        </div>
+        <div class="highlight-item">
+            <div class="highlight-icon">&#x1F30D;</div>
+            <h3>Extracurriculars</h3>
+            <p>Sports, clubs, debate, cultural activities, and more</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p class="copyright">© 2026 Fountain International High School. All Rights Reserved.</p>
+    <ul class="footer-links">
+        <li>Accessibility</li>
+        <li>High Visibility</li>
+        <li>Designed by DAMILOLA</li>
+    </ul>
+</footer>
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("navMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// Slider functionality
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slideIndex = (n + slides.length) % slides.length;
+    slides[slideIndex].classList.add('active');
+}
+
+function nextSlide() { showSlide(slideIndex + 1); }
+function prevSlide() { showSlide(slideIndex - 1); }
+
+document.querySelector('.slider-next')?.addEventListener('click', nextSlide);
+document.querySelector('.slider-prev')?.addEventListener('click', prevSlide);
+setInterval(nextSlide, 5000);
+</script>
+
+</body>
+</html>

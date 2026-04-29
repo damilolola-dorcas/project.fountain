@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery | Fountain International High School</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fihs.css">
+</head>
+<body>
+
+<header>
+    <div class="hero">
+        <img src="fihs/download.jpg" alt="School Logo">
+        <span class="hero-text">FIHS</span>
+    </div>
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Programs</a>
+        <a href="admission.html">Admissions</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <button class="apply-btn" onclick="location.href='admission.html'">Apply Now</button>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">&#x2630;</div>
+</header>
+
+<h1 class="gallery-title">&#x1F4F8; MEMORY LANE</h1>
+<p class="gallery-subtitle">Moments of excellence, culture, learning, and joy</p>
+
+<div class="gallery">
+    <div class="card"><img src="fihs/culture.jpg" alt="Cultural Day"></div>
+    <div class="card tall"><img src="fihs/photo.jpg" alt="Graduation"></div>
+    <div class="card"><img src="fihs/director.jpg" alt="Leadership"></div>
+    <div class="card wide"><img src="fihs/staff.jpg" alt="Staff Team"></div>
+    <div class="card"><img src="fihs/blue.jpg" alt="Sports Day"></div>
+    <div class="card tall"><img src="fihs/green.jpg" alt="Green Field"></div>
+    <div class="card"><img src="fihs/red.jpg" alt="Classroom"></div>
+    <div class="card wide"><img src="fihs/smile.jpg" alt="Happy Students"></div>
+    <div class="card"><img src="fihs/tropy.jpg" alt="Awards"></div>
+    <div class="card"><img src="fihs/yellow.jpg" alt="Yellow Team"></div>
+    <div class="card tall"><img src="fihs/img1.jpg" alt="Science Lab"></div>
+    <div class="card"><img src="fihs/img2.jpg" alt="Music Class"></div>
+    <div class="card wide"><img src="fihs/img3.jpg" alt="Library"></div>
+    <div class="card"><img src="fihs/img4.jpg" alt="Debate"></div>
+    <div class="card tall"><img src="fihs/img5.jpg" alt="ICT"></div>
+    <div class="card"><img src="fihs/img6.jpg" alt="Art"></div>
+    <div class="card wide"><img src="fihs/img7.jpg" alt="Event"></div>
+    <div class="card"><img src="fihs/img8.jpg" alt="Drama"></div>
+    <div class="card"><img src="fihs/img9.jpg" alt="Sports"></div>
+    <div class="card tall"><img src="fihs/img0.jpg" alt="Graduation"></div>
+    <div class="card"><img src="fihs/img11.jpg" alt="Field Trip"></div>
+    <div class="card wide"><img src="fihs/img12.jpg" alt="Assembly"></div>
+</div>
+
+<footer class="footer">
+    <p class="copyright">© 2026 Fountain International High School. All Rights Reserved.</p>
+    <ul class="footer-links">
+        <li>Accessibility</li>
+        <li>High Visibility</li>
+        <li>Designed by DAMILOLA</li>
+    </ul>
+</footer>
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("navMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About FIHS | Fountain International High School</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fihs.css">
+</head>
+<body>
+
+<header>
+    <div class="hero">
+        <img src="fihs/download.jpg" alt="School Logo">
+        <span class="hero-text">FIHS</span>
+    </div>
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="academics.html">Programs</a>
+        <a href="admission.html">Admissions</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <button class="apply-btn" onclick="location.href='admission.html'">Apply Now</button>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">&#x2630;</div>
+</header>
+
+<section class="about-hero">
+    <h1>About Fountain International High School</h1>
+    <p>Excellence &bull; Character &bull; Service</p>
+</section>
+
+<section class="about-wrapper">
+    <div class="about-main">
+        <div class="breadcrumb">Home > About</div>
+        
+        <h2>Our Philosophy</h2>
+        <p>Fountain International High School, located in Ado-Ekiti, Ekiti State, is committed to delivering world-class education in a disciplined and intellectually stimulating environment. Since its establishment, the school has focused on raising well-rounded students who are academically sound, morally upright, and prepared to contribute meaningfully to society.</p>
+
+        <p>The school operates a curriculum that combines the Nigerian educational system with modern international practices. Students are prepared for key examinations such as WAEC and NECO while also developing critical thinking, creativity, and leadership skills needed in today's world.</p>
+
+        <h2>Our Core Values</h2>
+        <ul class="values-list">
+            <li><strong>Excellence:</strong> Striving for the highest standards in academics and character</li>
+            <li><strong>Integrity:</strong> Building honest, responsible, and trustworthy individuals</li>
+            <li><strong>Discipline:</strong> Cultivating self-control, respect, and order</li>
+            <li><strong>Service:</strong> Encouraging contribution to community and society</li>
+        </ul>
+
+        <h2>Our Commitment</h2>
+        <p>At Fountain International High School, education extends beyond academics. The institution emphasizes character formation, discipline, and responsibility. Students are guided to become confident individuals with integrity and strong moral values. With qualified teachers, modern learning facilities, and a supportive environment, the school ensures every student receives the attention needed to excel.</p>
+
+        <h2>Our Achievements</h2>
+        <p>Fountain International High School has recorded several achievements in both academics and student development. The school is widely recognized for its outstanding performance in external examinations, including WAEC and NECO, with students consistently producing excellent results. In UTME (JAMB), students have achieved high scores, with many scoring above 300. The school has also made significant progress in science and technology education, providing modern ICT facilities and encouraging participation in coding, robotics, and science clubs.</p>
+
+        <h2>Leadership Message</h2>
+        <div class="message-box">
+            <p>"We believe that every child has unique potential waiting to be unleashed. At Fountain International, we don't just teach; we inspire, mentor, and prepare students for life beyond the classroom. Our commitment is to raise leaders who will transform Nigeria and the world."</p>
+            <p class="message-signature">— Principal, Fountain International High School</p>
+        </div>
+    </div>
+
+    <aside class="about-sidebar">
+        <h3>Explore More</h3>
+        <ul>
+            <li><a href="index.html">&#127969; Home</a></li>
+            <li><a href="academics.html">&#x1F4DA; Academic Programs</a></li>
+            <li><a href="admission.html">&#x1F4DD; Admissions 2026/27</a></li>
+            <li><a href="gallery.html">&#x1F4F8; Photo Gallery</a></li>
+            <li><a href="contact.html">&#x1F4DE; Contact Us</a></li>
+        </ul>
+        <div class="sidebar-cta">
+            <h4>Enroll Today</h4>
+            <p>Limited seats available for 2026/27 session</p>
+            <button onclick="location.href='admission.html'">Apply Now →</button>
+        </div>
+    </aside>
+</section>
+
+<footer class="footer">
+    <p class="copyright">© 2026 Fountain International High School. All Rights Reserved.</p>
+    <ul class="footer-links">
+        <li>Accessibility</li>
+        <li>High Visibility</li>
+        <li>Designed by DAMILOLA</li>
+    </ul>
+</footer>
+
+<script>
+function toggleMenu() {
+    let menu = document.getElementById("navMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
+</body>
+</html>
