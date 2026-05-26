@@ -453,7 +453,7 @@ nav a.active {
     cursor: pointer;
 }
 
-/* GALLERY */
+/* GALLERY - Clean uniform grid */
 .gallery-title {
     text-align: center;
     font-size: 3rem;
@@ -469,35 +469,58 @@ nav a.active {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-auto-rows: 220px;
-    gap: 22px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
     padding: 30px 50px;
 }
 
 .card {
+    aspect-ratio: 1 / 1;  /* Makes every card a perfect square */
     overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: 0.25s;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    background: white;
+    background: #e8e8e8;  /* Placeholder color while loading */
 }
 
 .card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: 0.4s;
+    object-fit: cover;  /* Crops image to fill square perfectly */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 .card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
-.tall { grid-row: span 2; }
-.wide { grid-column: span 2; }
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 12px;
+        padding: 20px;
+    }
+    
+    .gallery-title {
+        font-size: 2rem;
+    }
+}
 
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 15px;
+    }
+}
 /* CONTACT PAGE */
 .contact-hero {
     background: linear-gradient(135deg, #1f5e2a, #0f3b1a);
